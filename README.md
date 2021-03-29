@@ -42,5 +42,6 @@ Classes:
         - if there are any invalid order, if adds the error type to the error list for later printing
     - When printing, checks to see if there were any errors in the list, if so it will return those out in the correct format as a string
     - if there were no errors, if will return a string in the desire format
+
 menu_tests:
 - runs through a pretty comprehensive set of inputs that might throw errors
