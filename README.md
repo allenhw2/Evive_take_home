@@ -19,28 +19,28 @@ I originally had the code print directly from the classes, but in order to facil
 
 Design:
 Evive_menu_cycle: 
-    - greets users and ask for input
-    - creates a Order object and populates the object
-    - prints out the string output statement from the Order object
-    - loops until user specifies to leave (or an exception is raised)
+- greets users and ask for input
+- creates a Order object and populates the object
+- prints out the string output statement from the Order object
+- loops until user specifies to leave (or an exception is raised)
 Evive_menu_single:
-    - no greeting immediately ask for order
-    - prints order in the same fashion as above
-    - closes
+- no greeting immediately ask for order
+- prints order in the same fashion as above
+- closes
 
 Classes:
-    - the main code for the individual classes
-    - Order Class:
-        - Takes the string input and does checks to make sure it is valid
-        - Creates and initializes the correct order type class
-        - raises exceptions if formatting is invalid or the meal type is unknown
-        - Print() returns the string output of the meal
-    - Breakfast/Lunch/Dinner Class:
-        - takes order and populates the desired lists with the name of the item
-        - gets the name from a dictionary menu that can be updated to add more items
-        - Uses if statements to fit the requirements of each food type
-            - if there are any invalid order, if adds the error type to the error list for later printing
-        - When printing, checks to see if there were any errors in the list, if so it will return those out in the correct format as a string
-        - if there were no errors, if will return a string in the desire format
+- the main code for the individual classes
+- Order Class:
+    - Takes the string input and does checks to make sure it is valid
+    - Creates and initializes the correct order type class
+    - raises exceptions if formatting is invalid or the meal type is unknown
+    - Print() returns the string output of the meal
+- Breakfast/Lunch/Dinner Class:
+    - takes order and populates the desired lists with the name of the item
+    - gets the name from a dictionary menu that can be updated to add more items
+    - Uses if statements to fit the requirements of each food type
+        - if there are any invalid order, if adds the error type to the error list for later printing
+    - When printing, checks to see if there were any errors in the list, if so it will return those out in the correct format as a string
+    - if there were no errors, if will return a string in the desire format
 menu_tests:
-    - runs through a pretty comprehensive set of inputs that might throw errors
+- runs through a pretty comprehensive set of inputs that might throw errors
