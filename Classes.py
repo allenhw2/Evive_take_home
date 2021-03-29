@@ -1,3 +1,4 @@
+
 #Evive Take Home Allen Wang 2021
 
 from collections import Counter
@@ -12,8 +13,11 @@ class Order:
         meal_type = menu_order[0].lower()
 
         #normally I would just raise an exeception here or an error, but the spec sheet says otherwise
-        if (len(menu_order) > 1):
+        #these group of if, elif, and else statements are to check whether or not the formatting is correct or whether they inputed an order or not
+        if (len(menu_order) > 1 and len(menu_order) < 3):
             items = menu_order[1].split(',')
+        elif (len(menu_order) > 2):
+            raise Exception("incorrect ordering format")
         else:
             items = []
 
@@ -31,7 +35,7 @@ class Order:
         if self.meal == None:
             raise Exception("Invalid meal")
 
-        self.meal.print();
+        return self.meal.print();
 
 
 class Lunch():
@@ -84,8 +88,8 @@ class Lunch():
         #if there were any errors in the order found, print them
         if len(self.error_list) > 0:
             error_message = "Unable to process: "
-            print(error_message + (', '.join(self.error_list)))
-            return
+            error_message += (', '.join(self.error_list))
+            return error_message
         
         #printing the correct format of order
         order = self.main[0] + ", "
@@ -94,7 +98,7 @@ class Lunch():
         else:
             order += self.side[0] + ", "
         order += self.drink[0]
-        print(order)
+        return order
 
 
 
@@ -159,8 +163,8 @@ class Dinner():
         #if there were any errors in the order found, print them
         if len(self.error_list) > 0:
             error_message = "Unable to process: "
-            print(error_message + (', '.join(self.error_list)))
-            return
+            error_message += (', '.join(self.error_list))
+            return error_message
         
         #printing the correct format of order
         order = self.main[0] + ", "
@@ -170,7 +174,7 @@ class Dinner():
         #water is always added
         order += "Water, "
         order += self.desert[0]
-        print(order)
+        return order
 
 class Breakfast():
     def __init__(self,order):
@@ -224,8 +228,8 @@ class Breakfast():
         #if there were any errors in the order found, print them
         if len(self.error_list) > 0:
             error_message = "Unable to process: "
-            print(error_message + (', '.join(self.error_list)))
-            return
+            error_message += (', '.join(self.error_list))
+            return error_message
         
         #printing the correct format of order
         order = self.main[0] + ", "
@@ -234,5 +238,6 @@ class Breakfast():
             order += self.drink[0] + "(" + str(len(self.drink)) +")"
         else:
             order += self.drink[0]
-        print(order)
+        #print(order)
+        return order
 

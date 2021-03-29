@@ -4,7 +4,7 @@ import Classes
 def main():
     selection = input("")
     order = Classes.Order(selection)
-    order.print()
+    print(order.print())
 
 if __name__ == "__main__":
     main()

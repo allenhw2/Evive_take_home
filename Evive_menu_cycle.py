@@ -4,9 +4,9 @@ import Classes
 def main():
     selection = input("Hello and Welcome! \nWhat would you like to order?\n")
 
-    while selection != "nothing":
+    while selection != "nothing" and selection != "":
         order = Classes.Order(selection)
-        order.print()
+        print(order.print())
         selection = input("What would you like to order?\nYou can also leave by ordering 'nothing'!\n")
     
     input('Press ENTER to exit')
