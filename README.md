@@ -44,6 +44,6 @@ I originally had the code print directly from the classes, but in order to facil
   - When printing, checks to see if there were any errors in the list, if so it will return those out in the correct format as a string
   - if there were no errors, if will return a string in the desire format
 
-### menu_tests:
-- runs through a pretty comprehensive set of inputs that might throw errors
+- menu_tests:
+  - runs through a pretty comprehensive set of inputs that might throw errors
 
